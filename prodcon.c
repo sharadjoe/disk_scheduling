@@ -1,10 +1,9 @@
-#include<conio.h>
 #include<stdlib.h>
 void main()
 {
-    int mutex[100],a[100],size_buffer,size_customer,choice=1;
+    int mutex[100],a[100],size_buffer,size_customer,choice=1,mutex_producer,mutex_consumer[100],x=0;
     clrscr();
-    void procedure();
+    int producer(int);
     void consumer();
     printf("Enter the size of buffer:")
     scanf("%d",&size_buffer);
@@ -16,8 +15,8 @@ void main()
         {
             case 1:
             {
-                if(size_buffer!=0)
-                producer();
+                if(size_buffer!=0 and mutex_producer==1 and x<size_buffer)
+                producer(x);
                 else
                 printf("Buffer is empty")
             }
@@ -27,4 +26,12 @@ void main()
     printf("Do you want to continue(0/1):")
     scanf("%d",&choice);
     }
+getch();
+}
+
+int procedure(int x)
+{
+    x++;
+    printf("The %d item has been created",x);
+    return x;
 }
