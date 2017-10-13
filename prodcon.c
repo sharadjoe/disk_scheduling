@@ -25,9 +25,11 @@ void main()
                 for(int i=0;i<size_customer;i++)
                 {
                     printf("\nConsumer ",i)
+                    mutex[i]=0
                 }
                 printf("\n Enter the consuming consumer(0,%d)",i);
                 scanf("%d",choice_consumer);
+                consumer(choice_consumer,mutex[choice_consumer]);
             }
             default:
             printf("Sorry you entered the wrong choice");
@@ -43,4 +45,8 @@ int procedure(int x)
     x++;
     printf("The %d item has been created",x);
     return x;
+}
+int consumer(int choice_consumer)
+{
+    printf("The item has been consumed by consumer ",choice_consumer);
 }
