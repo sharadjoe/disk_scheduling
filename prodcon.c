@@ -1,7 +1,7 @@
 #include<stdlib.h>
 void main()
 {
-    int mutex[100],a[100],size_buffer,size_customer,choice=1,mutex_producer,mutex_consumer[100],x=0;
+    int mutex[100],a[100],size_buffer,size_customer,choice=1,mutex_producer,mutex_consumer[100],x=0,choice_consumer;
     clrscr();
     int producer(int);
     void consumer();
@@ -19,6 +19,15 @@ void main()
                 producer(x);
                 else
                 printf("Buffer is empty")
+            }
+            case 2:
+            {
+                for(int i=0;i<size_customer;i++)
+                {
+                    printf("\nConsumer ",i)
+                }
+                printf("\n Enter the consuming consumer(0,%d)",i);
+                scanf("%d",choice_consumer);
             }
             default:
             printf("Sorry you entered the wrong choice");
