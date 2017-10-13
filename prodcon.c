@@ -46,7 +46,9 @@ int procedure(int x)
     printf("The %d item has been created",x);
     return x;
 }
-int consumer(int choice_consumer)
+int consumer(int choice_consumer,int mutex[choice_consumer])
 {
-    printf("The item has been consumed by consumer ",choice_consumer);
+    if(mutex[choice_consumer]==1)
+    printf("The item %d has been consumed by consumer ",x,choice_consumer);
+    x--;
 }
