@@ -54,8 +54,7 @@ int main()
     printf("\nDo you want to continue(0/1):");
     scanf("%d",&condition);
     }
-    for(i=0;i<size_consumer;i++)
-        printf("%d",mutex[i]);
+    
 }
 
 int producer(int x)
